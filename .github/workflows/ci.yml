@@ -9,5 +9,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-      - run: python assignment1-ci-cd/app.py
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Debug files
+        run: |
+          pwd
+          ls -R
+
+      - name: Run Python file
+        run: python3 assignment1_ci_cd/app.py

@@ -27,3 +27,6 @@ jobs:
 
       - name: Run Assignment 6 Linux Setup
         run: bash assignment6_linux/setup.sh || echo "Skipped sudo"
+
+      - name: Run Assignment 7 Shell Script
+        run: bash assignment7_shell/run.sh

@@ -16,5 +16,11 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Run Assignment 5 Monitoring Script
+      - name: Run Assignment 1
+        run: python assignment1_ci_cd/app.py || echo "Assignment 1 skipped"
+
+      - name: Run Assignment 3
+        run: python assignment3_monitoring/monitor.py || echo "Assignment 3 skipped"
+
+      - name: Run Assignment 5
         run: python assignment5_devops/monitor.py

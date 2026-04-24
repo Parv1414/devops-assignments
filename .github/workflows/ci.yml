@@ -24,3 +24,6 @@ jobs:
 
       - name: Run Assignment 5
         run: python assignment5_devops/monitor.py
+
+      - name: Run Assignment 6 Linux Setup
+        run: bash assignment6_linux/setup.sh || echo "Skipped sudo"

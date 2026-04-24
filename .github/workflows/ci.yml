@@ -1,15 +1,14 @@
-name: CI Pipeline
+name: DevOps Pipeline
 
 on:
   push:
-    branches: ["main"]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v3
 
       - name: Setup Python
@@ -17,10 +16,5 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Debug files
-        run: |
-          pwd
-          ls -R
-
-      - name: Run Python file
-        run: python3 assignment1_ci_cd/app.py
+      - name: Run Assignment 5 Monitoring Script
+        run: python assignment5_devops/monitor.py
